@@ -5,6 +5,19 @@ import { useTranscriber } from "./hooks/useTranscriber";
 function App() {
     const transcriber = useTranscriber();
 
+    const sendHeightToParent = () => {
+        const body = document.body;
+        const html = document.documentElement;
+      
+        const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+      
+        window.parent.postMessage({ type: 'setHeight', height: height }, '*');
+      };
+      
+      // Trigger on initial load and after significant updates
+      window.onload = sendHeightToParent;
+      
+
     return (
         <div className='flex justify-center items-center min-h-screen'>
             <div className='container flex flex-col justify-center items-center'>
