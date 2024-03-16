@@ -1,5 +1,4 @@
 import { AudioManager } from "./components/AudioManager";
-import Transcriber from "./components/NoteTaker/Tanscriber";
 import Transcript from "./components/Transcript";
 import { useTranscriber } from "./hooks/useTranscriber";
 
