@@ -2,17 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body,
-#root {
-    height: 100%;
-}
-
-audio::-webkit-media-controls-panel {
-    background-color: white;
-}
-
 .container {
-    width: 41rem /* 656px */;
+    width: 42rem /* 656px */;
     max-width: 95vw;
 }
